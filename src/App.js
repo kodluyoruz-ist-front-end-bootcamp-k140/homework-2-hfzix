@@ -8,7 +8,7 @@ function App() {
   const [checked, setChecked] = useState(false);
   const [firstpage, setFirstpage] = useState(0);
   const [secondpage, setSecondpage] = useState(50);
-  const [pagenumber, setPagenumber] = useState(4);
+  const [pagenumber, setPagenumber] = useState(50);
   const [dataid, setDataid] = useState(true);
   const [datatitle, setDatatitle] = useState(true);
   const [arr, setArr] = useState([1, 2, 3, 4]);
@@ -99,6 +99,7 @@ function App() {
       </button>
       <input
         type="text"
+
         onChange={(e) => setPagenumber(e.target.value)}
       ></input>
       {pageDataCount ? " "+pagenumber+" Page per data " : "Plase write number "}
