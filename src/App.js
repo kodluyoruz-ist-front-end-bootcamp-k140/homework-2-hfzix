@@ -51,10 +51,10 @@ function App() {
   const Pagination = (num) => {
      setFirstpage();
      setSecondpage(0);
-     const datacount = num * pagenumber-50
+     const datacount = num * pagenumber-Number(pagenumber)
     
     setFirstpage(datacount);
-    setSecondpage(datacount+pagenumber);
+    setSecondpage(Number(datacount)+Number(pagenumber));
 
     console.log(firstpage, secondpage, "sayfaid", num, pagenumber, pageDataCount);
     console.log(datacount, Number(datacount)+Number(pagenumber));
@@ -62,8 +62,8 @@ function App() {
 
   // Sayfadaki veri sayısı
   const List = () => {
-    if (pagenumber == Number(pagenumber))
-      for (var i = 0; i < pagenumber; i++) empty.push(i);
+    if (pageDataCount == Number(pageDataCount))
+      for (var i = 1; i <= pageDataCount; i++) empty.push(i);
 
     setArr(empty);
   };
